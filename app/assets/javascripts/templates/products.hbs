@@ -1,0 +1,40 @@
+
+	<h3>{{title}}</h3> 
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+			<th> Product </td>
+			<th> Description </th>
+			<th> Action </th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each controller }}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{description}} </td>
+				<td> <button {{action editProduct this}} class="btn btn-primary"> Edit </button> 
+					<button {{action "deleteProduct" this}} class="btn btn-danger"> Delete </button> 
+
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>	
+	</table>
+
+	<button {{action addNew}} class="btn btn-success"> Add Product </button>
+
+	{{outlet}}
+
+	{{#if isEditing}}
+	 
+	  {{render "products/edit"}}
+
+	{{/if}}
+
+	
+	
+
+
+

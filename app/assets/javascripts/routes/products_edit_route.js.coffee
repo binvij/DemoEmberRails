@@ -1,0 +1,1 @@
+DemoEmber.ProductsEditRoute = Ember.Route.extend()
