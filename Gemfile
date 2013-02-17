@@ -9,7 +9,7 @@ group :development do
 	gem 'sqlite3'
 end 
 group :production do
-	gem 'ps'
+	gem 'pg'
 end 
 
 gem 'ember-rails'
